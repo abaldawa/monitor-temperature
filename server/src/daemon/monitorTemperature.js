@@ -1,5 +1,7 @@
 /**
  * User: abhijit.baldawa
+ *
+ * Temperature monitoring daemon methods exposed by this module
  */
 
 const
@@ -10,6 +12,21 @@ const
 let
     intervalId;
 
+/**
+ * @public
+ *
+ * Calls the service to fetch random temperature of all the beers
+ *
+ * @param {Array.<{name: string, minimumTemperature: number, maximumTemperature: number, unit: string}>} beersArr
+ * @returns {Promise<Array.<{
+ *     name: string,
+ *     minimumTemperature: number,
+ *     maximumTemperature: number,
+ *     unit: string,
+ *     currentTemperature: string,
+ *     safe: boolean
+ * }>>}
+ */
 function monitorTemperature( beersArr ) {
     return Promise.all(
             beersArr.map( async beerObj => {
@@ -42,6 +59,15 @@ function monitorTemperature( beersArr ) {
           );
 }
 
+/**
+ * @public
+ *
+ * This method starts the daemon to monitor and emit current temperature of all the beers to the UI via socket after
+ * every 10 seconds
+ *
+ * @param {Object} args
+ *     @param {Array.<Object>} args.beers - All the beers whose temperatures needs to be monitored
+ */
 function start( args ) {
     const
         {beers} = args;
@@ -51,6 +77,10 @@ function start( args ) {
     }, 10000);
 }
 
+/**
+ * @public
+ * This method stops the daemon
+ */
 function stop() {
     clearInterval(intervalId);
 }

@@ -1,5 +1,7 @@
 /**
  * User: abhijit.baldawa
+ *
+ * This module exposes methods to interact with third party HTTP services
  */
 
 const
@@ -10,6 +12,15 @@ const
 let
     TEMPERATURE_SENSOR_URL;
 
+/**
+ * @public
+ *
+ * Dependency injector method
+ *
+ * @param {Object} args
+ *     @param {Object} args.temperatureSensorApis
+ *         @param {string} args.temperatureSensorApis.TEMPERATURE_SENSOR_URL
+ */
 function injectDependencies( args ) {
     const
         {temperatureSensorApis} = args;
@@ -17,6 +28,14 @@ function injectDependencies( args ) {
     ({TEMPERATURE_SENSOR_URL} = temperatureSensorApis);
 }
 
+/**
+ * @private
+ *
+ * This method fetches JSON response from the provided URL
+ *
+ * @param {string} URL
+ * @returns {Promise<Object>}
+ */
 async function fetchJsonDataFromUrl( URL ) {
     if( !URL || typeof URL !== "string" ) {
         throw new Error("Missing/invalid URL");
@@ -70,6 +89,14 @@ async function fetchJsonDataFromUrl( URL ) {
     return responseJson;
 }
 
+/**
+ * @public
+ *
+ * This method fetches current beer temperature from a mock sensor server
+ *
+ * @param {string} beerName - name of the brewery whose current temperature needs to be fetched
+ * @returns {Promise<{id: string, temperature: number}>}
+ */
 async function getCurrentBeerTemperature( beerName ) {
     if( !beerName || typeof beerName !== "string" ) {
         throw new Error(`Invalid/Missing 'beerName'`);

@@ -1,5 +1,7 @@
 /**
  * User: abhijit.baldawa
+ *
+ * This module exposes methods to perform CRUD operations with (mock) database
  */
 
 let
