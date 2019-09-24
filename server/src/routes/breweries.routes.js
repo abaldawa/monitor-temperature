@@ -28,10 +28,6 @@ function addRoutes() {
     router.post('/stopMonitoring', [
         breweriesController.stopMonitoring
     ]);
-
-    router.get('/currentTemperatures', [
-       breweriesController.getCurrentBreweriesTemperature
-    ]);
 }
 
 module.exports = {

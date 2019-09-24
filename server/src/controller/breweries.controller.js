@@ -48,15 +48,10 @@ function isMonitoring( req, res ) {
     } );
 }
 
-async function getCurrentBreweriesTemperature( req, res ) {
-    res.json( await monitorTemperatureDaemon.monitorTemperature(breweriesModel.getAllBreweries()) );
-}
-
 module.exports = {
     injectDependencies,
     getAllBreweries,
     startMonitoring,
     stopMonitoring,
-    isMonitoring,
-    getCurrentBreweriesTemperature
+    isMonitoring
 };
