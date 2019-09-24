@@ -20,7 +20,7 @@ To run the unit tests run:
 #### npm run unitTests
 
 ## Points to note:
-1. The latest ECMA script syntax is used and everything is build on the latest version of Node.js (12.4.0)
+1. The latest ECMA script syntax is used and everything is build on the latest version of Node.js (12.10.0) and react.js (16.9)
 2. I have designed coding patterns and although the entire code is completely documented with Jsdocs and comments, below approach is designed by me for usages of async/await.
 
 ```javascript
