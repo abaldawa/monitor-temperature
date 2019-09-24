@@ -2,9 +2,9 @@
 
 ## monitor-temperature
 A full stack application to monitor live temperature of breweries.
-Front end: React.js (used react context instead of redux to not complicate UI for small usecase)
-Backend: Node.js
-Database: Inmemory mock JSON based database
+##### Front end: React.js (used react context instead of redux to not complicate UI for small usecase. Also used react hooks)
+##### Backend: Node.js
+##### Database: Inmemory mock JSON based database
 
 ## How to run:
 1. git clone project
