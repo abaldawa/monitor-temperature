@@ -1,0 +1,6 @@
+{
+  "temperatureChange": {
+    "eventName": "LATEST_TEMPERATURE",
+    "description": "The server will emit this event to all connected sockets notifying them about the latest breweries temperature"
+  }
+}

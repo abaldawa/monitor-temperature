@@ -1,0 +1,41 @@
+{
+  "monitoring": false,
+  "beers": [
+    {
+      "name": "Pilsner",
+      "minimumTemperature": 4,
+      "maximumTemperature": 6,
+      "unit": "°C"
+    },
+    {
+      "name": "IPA",
+      "minimumTemperature": 5,
+      "maximumTemperature": 6,
+      "unit": "°C"
+    },
+    {
+      "name": "Lager",
+      "minimumTemperature": 4,
+      "maximumTemperature": 7,
+      "unit": "°C"
+    },
+    {
+      "name": "Stout",
+      "minimumTemperature": 6,
+      "maximumTemperature": 8,
+      "unit": "°C"
+    },
+    {
+      "name": "Wheat beer",
+      "minimumTemperature": 3,
+      "maximumTemperature": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Pale Ale",
+      "minimumTemperature": 4,
+      "maximumTemperature": 6,
+      "unit": "°C"
+    }
+  ]
+}

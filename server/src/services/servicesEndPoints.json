@@ -1,0 +1,5 @@
+{
+  "temperatureSensorApis": {
+    "TEMPERATURE_SENSOR_URL": "https://temperature-sensor-service.herokuapp.com/sensor/$deviceName"
+  }
+}
